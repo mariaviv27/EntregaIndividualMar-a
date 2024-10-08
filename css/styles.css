@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url('../images/fondo.jpg'); /* Ruta a la imagen de fondo */
+    background-size: cover; /* Para cubrir toda la página */
+    background-position: center; /* Centra la imagen de fondo */
+    background-attachment: fixed; /* La imagen de fondo se mantiene fija al hacer scroll */
+    color: #333; /* Color del texto por defecto */
+    padding: 150px;
+}
+
+header {
+    top: 0;
+    left: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Mostrar elementos del menú de forma horizontal */
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative; /* Posicionar el submenú relativo al padre */
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+/* Estilos para el submenú que se despliega */
+.dropdown-content {
+    display: none; /* Oculto por defecto */
+    position: absolute; /* Posicionarlo justo debajo del enlace de "Inicio" */
+    background-color: #333; /* Fondo oscuro */
+    padding: 10px 0;
+    min-width: 160px; /* Ancho mínimo del submenú */
+    z-index: 1;
+    top: 100%; /* Posicionarlo justo debajo del enlace principal */
+    left: 0; /* Alinear el submenú a la izquierda del enlace */
+}
+
+.dropdown-content li {
+    display: block; /* Los elementos dentro del submenú se muestran como bloques */
+}
+
+.dropdown-content li a {
+    color: #fff; /* Color del texto del submenú */
+    padding: 10px 15px;
+    text-align: left;
+    white-space: nowrap; /* Evitar que el texto se divida en varias líneas */
+}
+
+.dropdown-content li a:hover {
+    background-color: #444; /* Cambiar el fondo cuando el usuario pasa el mouse */
+}
+
+/* Mostrar el submenú al pasar el mouse sobre el enlace "Inicio" */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Efecto hover en el enlace principal "Inicio" */
+.dropdown:hover a {
+    background-color: #444;
+}
+
+nav ul li a:hover {
+    background-color: #444;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+main {
+    margin: 20px 0;
+}
+
+h2, h3 {
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.content-container {
+    display: flex; /* Usar flexbox para alinear los elementos horizontalmente */
+    justify-content: center;/* Centrar los elementos dentro del contenedor */
+    align-items: flex-start; /* Alinear verticalmente al inicio */
+    margin: 30px 0; /* Espaciado superior e inferior */
+}
+
+.intro-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco translúcido */
+    padding: 50px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    max-width: 700px; /* Ancho máximo del contenedor */
+    margin: 0 20px; /* Margen horizontal */
+}
+
+.intro-container h2, /* Centrar el título principal */
+.intro-container h3 { /* Centrar el subtítulo */
+    text-align: center; /* Centrar texto */
+}
+
+.intro-container p, /* Alinear el párrafo a la izquierda */
+.intro-container ul { /* Alinear la lista a la izquierda */
+    text-align: left; /* Alinear a la izquierda */
+}
+
+.testimonials-container {
+    max-width: 300px; /* Ancho máximo del contenedor de testimonios */
+    margin-left: 20px; /* Margen izquierdo para separación */
+}
+
+.testimonial {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco ligeramente translúcido */
+    padding: 10px; /* Espaciado interno */
+    margin: 5px 0; /* Margen entre testimonios */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.tours-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco translúcido */
+    padding: 30px;
+    border-radius: 10px; /* Bordes redondeados */
+    max-width: 1000px; /* Ancho máximo del contenedor */
+    margin: 20px auto; /* Centrado horizontal */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    text-align: center;
+}
+
+.tours-container h2 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.tour {
+    display: flex; /* Mostrar los tours en línea horizontal */
+    justify-content: space-around; /* Espacio uniforme entre los tours */
+    align-items: flex-start;
+}
+
+.tour-item {
+    text-align: center; /* Centrar el texto e imagen dentro de cada tour */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    margin-left: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para cada tour */
+    max-width: 300px; /* Ancho máximo para cada tour */
+}
+
+.tour-item img {
+    width: 250px;  /* Ancho fijo */
+    height: 250px; /* Altura fija para hacer la imagen cuadrada */
+    object-fit: cover; /* Ajusta la imagen para que cubra el área sin deformarse */
+    border-radius: 8px; /* Bordes redondeados para las imágenes */
+    margin: 10px 0; /* Espacio superior e inferior para las imágenes */
+}
+
+.tour-item p {
+    margin: 10px 0; /* Espacio entre los párrafos */
+    font-size: 16px;
+}
+
+.oferta {
+    display: flex; /* Mostrar los tours en línea horizontal */
+    justify-content: space-around; /* Espacio uniforme entre los tours */
+    align-items: flex-start;
+}
+
+.oferta-item {
+    text-align: center; /* Centrar el texto e imagen dentro de cada tour */
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-left: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para cada tour */
+    max-width: 300px; /* Ancho máximo para cada tour */
+}
+
+.oferta-item img {
+    width: 250px;  /* Ancho fijo */
+    height: 250px; /* Altura fija para hacer la imagen cuadrada */
+    object-fit: cover; /* Ajusta la imagen para que cubra el área sin deformarse */
+    border-radius: 8px; /* Bordes redondeados para las imágenes */
+    margin: 10px 0; /* Espacio superior e inferior para las imágenes */
+}
+
+.oferta-item p {
+    margin: 10px 0; /* Espacio entre los párrafos */
+    font-size: 16px;
+}
+
+.ciudades {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 50px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    max-width: 900px; /* Ancho máximo */
+    margin: 30px auto; /* Centrar horizontalmente */
+}
+
+.ciudades h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.ciudades ul {
+    text-align: justify;
+    line-height: 1.4;
+}
+
+.ciudades ul li {
+    margin-bottom: 10px;
+}
+
+.formulario {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco translúcido */
+    padding: 50px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    max-width: 700px; /* Ancho máximo del contenedor */
+    margin: 0 20px; /* Margen horizontal */
+}
+
+.formulario h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+button {
+    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+section {
+    scroll-margin-top: 150px;
+}
+
+#aboutus, #ciudest, #porque {
+    scroll-margin-top: 150px;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Turismo en Europa</title>
+</head>
+<body>
+    <header>
+        <h1>Turismo en Ciudades Europeas</h1>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="index.html">Inicio</a>
+                    <ul class="dropdown-content">
+                        <li><a href="index.html#aboutus">About Us</a></li>
+                        <li><a href="index.html#ciudest">Ciudades Destacadas</a></li>
+                        <li><a href="index.html#porque">Por qué Europa</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="cities.html">Ciudades</a>
+                    <ul class="dropdown-content">
+                        <li><a href="cities.html#listaciu">Lista ciudades</a></li>
+                        <li><a href="cities.html#listamon">Lista monumentos</a></li>
+                    </ul>
+                </li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="content-container">
+        <section class="formulario">
+            <h2>Formulario de Reserva y Consula de Tours</h2>
+            <form>
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required><br>
+                
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required><br>
+                
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" id="contraseña" name="contraseña" placeholder="Crea una contraseña" required><br>
+                
+                <label for="pais">País de Origen:</label>
+                <select name="pais" id="pais" required>
+                    <option value="">Selecciona tu país</option>
+                    <option value="españa">España</option>
+                    <option value="francia">Francia</option>
+                    <option value="italia">Italia</option>
+                    <option value="alemania">Alemania</option>
+                    <option value="reino-unido">Reino Unido</option>
+                    <option value="otro">Otro</option>
+                </select>
+
+                <fieldset>
+                    <legend>Tipo de Tour Deseado:</legend>
+                    <div class="radio-group">
+                        <input type="radio" id="tour-urbano" name="tipo-tour" value="urbano" required>
+                        <label for="tour-urbano">Tour Urbano</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="tour-aventura" name="tipo-tour" value="aventura" required>
+                        <label for="tour-aventura">Tour Aventura</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="tour-cultura" name="tipo-tour" value="cultura" required>
+                        <label for="tour-cultura">Tour Cultura</label>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Extras:</legend>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="mapa" name="extras" value="mapa">
+                        <label for="mapa">Mapa de Turismo</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="transporte" name="extras" value="transporte">
+                        <label for="transporte">Transporte</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="alojamiento" name="extras" value="alojamiento">
+                        <label for="alojamiento">Alojamiento</label>
+                    </div>
+                </fieldset>                
+                
+                <label for="personas">Número de Personas:</label>
+                <input type="number" name="personas" id="personas" min="1" max="99" required><br>
+
+                <label for="comentarios">Comentarios:</label>
+                <textarea name="comentarios" id="comentarios" placeholder="¿Tienes alguna pregunta?" rows="4"></textarea><br>
+                
+                <label for="fecha">Fecha del Tour:</label>
+                <input type="date" name="fecha" id="fecha" required><br>
+
+                <label for="hora">Hora Preferida:</label>
+                <input type="time" name="hora" id="hora" required><br>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Turismo en Ciudades Europeas</p>
+    </footer>
+</body>
+</html>
